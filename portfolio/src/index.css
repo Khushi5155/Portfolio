@@ -24,3 +24,27 @@
 @keyframes blink {
   50% { border-color: transparent; }
 }
+/* Smooth Card Slide Up */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-slideUp {
+  animation: slideUp 1s ease-in-out forwards;
+}
+/* Skill Bar Animation */
+.skill-bar {
+  animation: fillBar 1.5s ease-in-out forwards;
+}
+
+@keyframes fillBar {
+  from { width: 0; }
+  to   { width: var(--skill-level); }
+}
+@keyframes skillFill {
+  from { width: 0; }
+  to { width: var(--skill-level); }
+}
+.skill-animate {
+  animation: skillFill 1.2s ease-in-out forwards;
+}
