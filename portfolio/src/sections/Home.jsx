@@ -28,7 +28,7 @@ export default function Home() {
       />
 
       {/* MAIN CARD */}
-      <CardItem>
+     
         <div className="pt-20 md:pt-28 flex flex-col items-center text-center md:text-left md:flex-row gap-10">
 
           {/* Floating Profile Image */}
@@ -51,15 +51,18 @@ export default function Home() {
             </p>
 
             <p className="mt-4 text-[#8892B0] font-inter text-lg leading-relaxed">
-              A creative & passionate
-              <span className="text-[#00FF9D] font-semibold"> Web Developer</span>
-              crafting modern UI/UX experiences with clean code & design.
-            </p>
+  A passionate
+  <span className="text-[#00FF9D] font-semibold"> Web Developer</span>   
+   who loves turning ideas into interactive, user-friendly interfaces.
+ 
+  Always curious, always learning — currently exploring
+  <span className="text-[#00FF9D] font-semibold"> React, Tailwind & AI-powered Web Apps.</span>
+</p>
 
             {/* Buttons */}
             <div className="flex gap-4 mt-6 justify-center md:justify-start">
               <Button text="View Resume" link="/resume.pdf" />
-              <Button text="Contact Me" link="#contact" />
+              <Button text="Contact Me" id="contact" />
             </div>
 
             {/* Social Icons */}
@@ -76,7 +79,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </CardItem>
+   
 
       {/* Scroll Down Arrow */}
       <a href="#about" className="absolute bottom-8 animate-bounce text-[#00FF9D] text-3xl">
