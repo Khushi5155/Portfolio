@@ -67,13 +67,13 @@ export default function Home() {
 
             {/* Social Icons */}
             <div className="flex gap-5 mt-6 justify-center md:justify-start text-2xl">
-              <a href="#" className="hover:text-[#00FF9D] transition-all duration-300">
+              <a href="https://github.com/Khushi5155" className="hover:text-[#00FF9D] transition-all duration-300">
                 <FaGithub />
               </a>
-              <a href="#" className="hover:text-[#00FF9D] transition-all duration-300">
+              <a href="https://www.linkedin.com/in/khushi-kumari-bb4305327?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BxXZ7%2FxLLRFSHA8JaNUTAAA%3D%3D" className="hover:text-[#00FF9D] transition-all duration-300">
                 <FaLinkedin />
               </a>
-              <a href="mailto:your@email.com" className="hover:text-[#00FF9D] transition-all duration-300">
+              <a href="kkaayana5155@gmail.com" className="hover:text-[#00FF9D] transition-all duration-300">
                 <FaEnvelope />
               </a>
             </div>
