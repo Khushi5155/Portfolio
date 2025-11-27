@@ -6,27 +6,27 @@ export default function Navbar() {
       
       {/* BRAND LOGO / NAME */}
       <h1 className="text-3xl font-bold tracking-wider text-[#00FF9D] font-poppins 
-        hover:drop-shadow-[0_0_8px_#00FF9D] transition-all duration-300 cursor-pointer">
-        &lt;Khushi /&gt;
+        hover:drop-shadow-[0_0_8px_#00FF9D] transition-all duration-300 cursor-pointer"><a href="#home"     className="nav-link"> &lt;Khushi /&gt;</a>
+        
       </h1>
 
       {/* NAV LINKS */}
       <ul className="hidden md:flex gap-10 text-lg font-inter">
         <li className="text-[#E6F1FF] hover:text-[#00FF9D] 
-          transition duration-300 cursor-pointer hover:scale-110">
-          Home
+          transition duration-300 cursor-pointer hover:scale-110"><a href="#home"     className="nav-link">Home</a>
+          
         </li>
         <li className="text-[#E6F1FF] hover:text-[#00FF9D] 
-          transition duration-300 cursor-pointer hover:scale-110">
-          Skills
+          transition duration-300 cursor-pointer hover:scale-110"><a href="#skills"   className="nav-link">Skills</a>
+          
         </li>
         <li className="text-[#E6F1FF] hover:text-[#00FF9D] 
-          transition duration-300 cursor-pointer hover:scale-110">
-          Projects
+          transition duration-300 cursor-pointer hover:scale-110"><a href="#projects" className="nav-link">Projects</a>
+          
         </li>
         <li className="text-[#E6F1FF] hover:text-[#00FF9D] 
-          transition duration-300 cursor-pointer hover:scale-110">
-          Contact
+          transition duration-300 cursor-pointer hover:scale-110"><a href="#contact"  className="nav-link">Contact</a>
+          
         </li>
       </ul>
     </nav>

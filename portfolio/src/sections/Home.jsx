@@ -7,7 +7,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 export default function Home() {
   return (
-    <section className="relative min-h-screen w-full bg-[#0A192F] flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen w-full bg-[#0A192F] flex items-center justify-center overflow-hidden">
 
       {/* GRADIENT OVERLAY */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#00101E] opacity-70 z-0" />
