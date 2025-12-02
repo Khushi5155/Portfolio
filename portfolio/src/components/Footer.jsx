@@ -3,10 +3,10 @@ import { Github, Linkedin, Mail, Heart } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0A192F] text-[#E6F1FF] py-10 mt-20 border-t border-[#00FF9D]/30">
+    <footer className="bg-[#0A192F] text-[#E6F1FF] py-10  border-t border-[#00FF9D]/30">
       
       {/* MAIN CONTAINER */}
-      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
 
         {/* BRANDING */}
         <motion.h2
@@ -60,7 +60,7 @@ export default function Footer() {
         style={{ fontFamily: "'Inter', sans-serif" }}
       >
         © {new Date().getFullYear()}  
-        <span className="text-[#00FF9D] font-semibold"> Khushi</span>.  
+        <span className="text-[#00FF9D] font-semibold"> Khushi Kumari</span>.  
         Built with <Heart size={14} className="inline text-[#00FF9D]" /> dedication & passion.
       </motion.div>
     </footer>
