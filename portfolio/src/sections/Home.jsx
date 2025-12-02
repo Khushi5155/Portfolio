@@ -33,7 +33,8 @@ export default function Home() {
       <div className="pt-20 md:pt-28 flex flex-col items-center text-center md:text-left md:flex-row gap-10">
 
         {/* PROFILE IMAGE (Same style as screenshot) */}
-        <div className="relative w-64 md:w-80 mx-auto">
+        <div className="relative w-64 md:w-80 mx-auto transform -translate-x-50 -translate-y-15">
+
           <img
             src={profileImg}
             alt="Profile"
