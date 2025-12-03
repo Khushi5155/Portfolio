@@ -87,14 +87,14 @@ export default function Contact() {
 
           <div className="flex justify-center gap-8">
             <a
-              href="mailto:khushi@gmail.com"
+              href="mailto:kkaayana5155@gmail.com"
               className="icon-btn hover:text-[#00FF9D] transition-all duration-300"
             >
               <Mail size={26} />
             </a>
 
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/Khushi5155"
               target="_blank"
               className="icon-btn hover:text-[#00FF9D] transition-all duration-300"
             >
@@ -102,7 +102,7 @@ export default function Contact() {
             </a>
 
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/khushi-kumari-bb4305327"
               target="_blank"
               className="icon-btn hover:text-[#00FF9D] transition-all duration-300"
             >
@@ -110,7 +110,7 @@ export default function Contact() {
             </a>
 
             <a
-              href="tel:+910000000000"
+              href="tel: 7982645256"
               className="icon-btn hover:text-[#00FF9D] transition-all duration-300"
             >
               <Phone size={26} />
