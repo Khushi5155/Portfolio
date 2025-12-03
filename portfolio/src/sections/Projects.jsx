@@ -5,14 +5,7 @@ export default function Projects() {
   const projects = [
    
    
-    {
-      title: "Desh Darshan – Crazy Facts",
-      description:
-        "A fun and interactive web app that displays surprising facts about all Indian states with animations, a dynamic UI, and smooth button interactions.",
-      tech: ["HTML", "CSS", "JavaScript"],
-      github: "https://github.com/yourusername/desh-darshan",
-      live: "#",
-    },
+   
 
     // ⭐ ALERTAX — EXISTING
     {
@@ -61,6 +54,15 @@ export default function Projects() {
   github: "https://github.com/yourusername/kala-ficial", // replace with your GitHub repo
   live: "https://your-kalaficial-live-link.com",         // replace with your live link
 },
+  {
+  title: "Desh Darshan – Explore India",
+  description:
+    "An immersive web experience that lets users explore India’s states and UTs through stunning tourist destinations, famous cultural spots, and surprising crazy facts. Features dynamic category sliders, a spin-to-reveal engine, smooth animations, and a visually engaging UI. ",
+  tech: ["HTML", "CSS", "JavaScript"],
+  github: "https://github.com/yourusername/desh-darshan",
+  live: "#",
+},
+
 
     {
   title: "OOPs Calculator – Object-Oriented C++ Console App",
