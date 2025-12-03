@@ -61,6 +61,21 @@ export default function Projects() {
       github: "https://github.com/yourusername/mannmitra", // add your repo
       live: "https://your-mannmitra-live-link.com",        // add your live link
     },
+    {
+  title: "Kala.ficial – Global Art Showcase Platform",
+  description:
+    "A global digital platform empowering emerging and undiscovered artists to showcase their creativity through online and offline exhibitions. Artists can connect, collaborate, get notified about exhibitions worldwide, and grow their artistic journey in a supportive global community.",
+  tech: [
+    "React.js",
+    "Node.js",
+    "MongoDB",
+    "Express.js",
+    "REST APIs",
+  ],
+  github: "https://github.com/yourusername/kala-ficial", // replace with your GitHub repo
+  live: "https://your-kalaficial-live-link.com",         // replace with your live link
+},
+
     
   ];
 
