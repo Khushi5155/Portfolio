@@ -1,4 +1,3 @@
-// src/sections/Projects.jsx
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import Tilt from "react-parallax-tilt";
 
@@ -29,7 +28,7 @@ export default function Projects() {
       live: "#",
     },
 
-    // ⭐ NEW PROJECT — ALERTAX
+    // ⭐ ALERTAX — EXISTING
     {
       title: "AlertaX – AI Disaster Alert System",
       description:
@@ -44,8 +43,25 @@ export default function Projects() {
         "WebSockets",
       ],
       github: "https://github.com/yourusername/alerta-x",
-      live: "https://your-alertax-live-link.com", // replace with your live link
+      live: "https://your-alertax-live-link.com",
     },
+
+    // ⭐ NEW — MANNMITRA SIH PROJECT
+    {
+      title: "MannMitra – Digital Mental Wellness Ecosystem",
+      description:
+        "A culturally intelligent, AI-powered mental wellness system built for Indian students. Features a Wisdom-AI chatbot, PHQ-9/GAD-7 assessment tools, mood tracking, peer support, and counselor/admin dashboards—created for Smart India Hackathon.",
+      tech: [
+        "React.js",
+        "Node.js",
+        "MongoDB",
+        "AI/ML",
+        "NLP",
+      ],
+      github: "https://github.com/yourusername/mannmitra", // add your repo
+      live: "https://your-mannmitra-live-link.com",        // add your live link
+    },
+    
   ];
 
   return (
