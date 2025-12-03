@@ -7,7 +7,7 @@ export default function Projects() {
     {
       title: "OOPs Calculator",
       description:
-        "Console-based C++ calculator using OOP concepts like polymorphism, classes, and function overloading.",
+        "A modular C++ console calculator using object-oriented principles like polymorphism, abstraction, and function overloading. Clean CLI-based UI + efficient class structure.",
       tech: ["C++", "OOP", "CLI App"],
       github: "https://github.com/yourusername/oops-calculator",
       live: "#",
@@ -15,15 +15,15 @@ export default function Projects() {
     {
       title: "Mini Search Engine",
       description:
-        "A fast miniature search engine implemented with hash tables + linked lists for optimized file scanning.",
-      tech: ["C++", "DSA", "Hashing"],
+        "A fast miniature search engine built using hash tables and linked lists for efficient indexing and file scanning. Designed for quick searching in large text files.",
+      tech: ["C++", "DSA", "Hash Table"],
       github: "https://github.com/yourusername/mini-search-engine",
       live: "#",
     },
     {
       title: "Desh Darshan – Crazy Facts",
       description:
-        "A fun web app that reveals surprising facts about all Indian states with animations and clean UI.",
+        "A fun and interactive web app that displays surprising facts about all Indian states with animations, a dynamic UI, and smooth button interactions.",
       tech: ["HTML", "CSS", "JavaScript"],
       github: "https://github.com/yourusername/desh-darshan",
       live: "#",
@@ -37,7 +37,7 @@ export default function Projects() {
     >
       {/* Heading */}
       <h2 className="text-4xl font-bold font-poppins tracking-wide">
-        Featured <span className="text-[#00FF9D]">Projects</span>
+        My <span className="text-[#00FF9D]">Projects</span>
       </h2>
       <div className="w-28 h-1 bg-[#00FF9D] mt-3 mb-14 rounded-full"></div>
 
@@ -49,27 +49,28 @@ export default function Projects() {
         {projects.map((project, index) => (
           <Tilt
             key={index}
-            tiltMaxAngleX={8}
-            tiltMaxAngleY={8}
+            tiltMaxAngleX={6}
+            tiltMaxAngleY={6}
             transitionSpeed={1500}
             glareEnable={true}
-            glareMaxOpacity={0.25}
-            className="relative group p-[2px] rounded-2xl 
-                       bg-gradient-to-br from-[#00FF9D] to-transparent 
-                       hover:from-[#00FF9D] hover:to-[#00c77d] 
-                       transition-all duration-500"
+            glareMaxOpacity={0.2}
+            className="group p-[2px] rounded-2xl 
+                       bg-gradient-to-br from-[#00FF9D] via-transparent to-transparent
+                       hover:from-[#00FF9D] hover:via-[#00c77d]/40 hover:to-transparent
+                       transition-all duration-500 shadow-lg"
           >
-            {/* Card Content */}
+            {/* Card Body */}
             <div
-              className="bg-[#0F253E]/80 backdrop-blur-xl rounded-2xl p-6 h-full
-                         border border-[#00FF9D]/10 shadow-xl
-                         group-hover:shadow-[0_0_30px_rgba(0,255,157,0.4)]
-                         transition-all duration-500 relative"
+              className="bg-[#0F253E]/80 backdrop-blur-xl rounded-2xl p-6 h-full relative
+                         border border-[#00FF9D]/20 
+                         shadow-[0_0_12px_rgba(0,255,157,0.15)]
+                         group-hover:shadow-[0_0_25px_rgba(0,255,157,0.45)]
+                         transition-all duration-500"
             >
-              {/* Floating Glow Circle */}
+              {/* Floating Neon Light */}
               <div className="absolute -top-10 -right-10 w-24 h-24 bg-[#00FF9D]/10 
                               rounded-full blur-2xl opacity-0 
-                              group-hover:opacity-60 transition-all duration-700">
+                              group-hover:opacity-70 transition-all duration-700">
               </div>
 
               {/* Title */}
@@ -89,7 +90,8 @@ export default function Projects() {
                     key={i}
                     className="px-3 py-1 text-xs rounded-full 
                                bg-[#112240] border border-[#00FF9D]/30 
-                               text-[#9FEFCC] font-inter"
+                               text-[#9FEFCC] font-inter shadow-sm
+                               hover:bg-[#00FF9D] hover:text-black transition-all duration-300"
                   >
                     {t}
                   </span>
@@ -102,11 +104,10 @@ export default function Projects() {
                 <a
                   href={project.github}
                   target="_blank"
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg 
-                             border border-[#00FF9D] text-[#00FF9D] 
-                             hover:bg-[#00FF9D] hover:text-black 
-                             transition-all duration-300 
-                             font-poppins text-sm 
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg
+                             border border-[#00FF9D] text-[#00FF9D]
+                             hover:bg-[#00FF9D] hover:text-black
+                             font-poppins text-sm transition-all duration-300
                              hover:shadow-[0_0_15px_#00FF9D]"
                 >
                   <FaGithub /> Code
@@ -116,11 +117,11 @@ export default function Projects() {
                 <a
                   href={project.live}
                   target="_blank"
-                  className="flex items-center gap-2 px-4 py-2 rounded-lg 
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg
                              bg-[#00FF9D] text-black 
-                             hover:bg-[#01e48a] 
+                             hover:bg-[#00e68a] 
                              transition-all duration-300 
-                             font-poppins text-sm 
+                             font-poppins text-sm
                              hover:shadow-[0_0_15px_#00FF9D]"
                 >
                   <FaExternalLinkAlt /> Live
