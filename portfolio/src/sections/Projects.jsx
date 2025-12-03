@@ -10,6 +10,7 @@ export default function Projects() {
     // ⭐ ALERTAX — EXISTING
     {
       title: "AlertaX – AI Disaster Alert System",
+      image: "/projects/alertax.png",
       description:
         "AI-powered Disaster Alert System delivering real-time, location-based alerts using smart maps, live APIs, and predictive models. Features live data streaming, interactive maps, shelters, and emergency tools.",
       tech: [
@@ -28,6 +29,7 @@ export default function Projects() {
     // ⭐ NEW — MANNMITRA SIH PROJECT
     {
       title: "MannMitra – Digital Mental Wellness Ecosystem",
+      image: "/projects/alertax.png",
       description:
         "A culturally intelligent, AI-powered mental wellness system built for Indian students. Features a Wisdom-AI chatbot, PHQ-9/GAD-7 assessment tools, mood tracking, peer support, and counselor/admin dashboards—created for Smart India Hackathon.",
       tech: [
@@ -42,6 +44,7 @@ export default function Projects() {
     },
     {
   title: "Kala.ficial – Global Art Showcase Platform",
+  image: "/projects/alertax.png",
   description:
     "A global digital platform empowering emerging and undiscovered artists to showcase their creativity through online and offline exhibitions. Artists can connect, collaborate, get notified about exhibitions worldwide, and grow their artistic journey in a supportive global community.",
   tech: [
@@ -56,6 +59,7 @@ export default function Projects() {
 },
   {
   title: "Desh Darshan – Explore India",
+  image: "/projects/alertax.png",
   description:
     "An immersive web experience that lets users explore India’s states and UTs through stunning tourist destinations, famous cultural spots, and surprising crazy facts. Features dynamic category sliders, a spin-to-reveal engine, smooth animations, and a visually engaging UI. ",
   tech: ["HTML", "CSS", "JavaScript"],
@@ -66,6 +70,7 @@ export default function Projects() {
 
     {
   title: "OOPs Calculator – Object-Oriented C++ Console App",
+  image: "/projects/alertax.png",
   description:
     "A clean and modular calculator built using core Object-Oriented Programming principles such as abstraction, inheritance, and polymorphism. Designed with a structured class architecture, the app supports multiple operations, function overloading, and an intuitive CLI experience.",
   tech: ["C++", "OOP", "Inheritance", "Polymorphism"],
@@ -74,6 +79,7 @@ export default function Projects() {
 },
  {
   title: "Mini Search Engine – File Indexing & Retrieval System",
+  image: "/projects/alertax.png",
   description:
     "A lightweight yet powerful search engine built using efficient data structures like Hash Tables and Linked Lists for fast text indexing and retrieval. It scans multiple files, stores word-frequency mappings, and delivers quick, accurate search results using optimized lookup operations.",
   tech: ["C++", "DSA", "Hash Tables", "Linked Lists"],
@@ -126,11 +132,21 @@ export default function Projects() {
                               rounded-full blur-2xl opacity-0 
                               group-hover:opacity-70 transition-all duration-700">
               </div>
+              
 
               {/* Title */}
               <h3 className="text-2xl font-semibold text-[#00FF9D] tracking-wide font-poppins">
                 {project.title}
               </h3>
+              {/* Project Image */}
+<div className="w-full h-40 rounded-xl overflow-hidden mb-4">
+  <img
+    src={project.image}
+    alt={project.title}
+    className="w-full h-full object-cover rounded-xl 
+               transform group-hover:scale-110 transition-all duration-700"
+  />
+</div>
 
               {/* Description */}
               <p className="mt-3 text-sm text-[#B8C2D8] leading-relaxed font-inter">
