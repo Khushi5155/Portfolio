@@ -28,6 +28,24 @@ export default function Projects() {
       github: "https://github.com/yourusername/desh-darshan",
       live: "#",
     },
+
+    // ⭐ NEW PROJECT — ALERTAX
+    {
+      title: "AlertaX – AI Disaster Alert System",
+      description:
+        "AI-powered Disaster Alert System delivering real-time, location-based alerts using smart maps, live APIs, and predictive models. Features live data streaming, interactive maps, shelters, and emergency tools.",
+      tech: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Python (Flask)",
+        "MongoDB",
+        "Socket.io",
+        "WebSockets",
+      ],
+      github: "https://github.com/yourusername/alerta-x",
+      live: "https://your-alertax-live-link.com", // replace with your live link
+    },
   ];
 
   return (
