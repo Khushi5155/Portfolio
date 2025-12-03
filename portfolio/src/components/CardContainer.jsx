@@ -1,5 +1,6 @@
 import Home from "../sections/Home";
 import About from "../sections/About";
+import Achivement from "../sections/Achivements";
 import Skills from "../sections/Skills";
 import Projects from "../sections/Projects";
 import Contact from "../sections/Contact";
@@ -12,6 +13,7 @@ export default function CardContainer() {
       <About />
       <Skills />
       <Projects />
+      <Achivement/>
       <Contact />
     
     </div>
