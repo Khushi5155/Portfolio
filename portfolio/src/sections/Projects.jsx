@@ -4,14 +4,7 @@ import Tilt from "react-parallax-tilt";
 export default function Projects() {
   const projects = [
    
-    {
-      title: "Mini Search Engine",
-      description:
-        "A fast miniature search engine built using hash tables and linked lists for efficient indexing and file scanning. Designed for quick searching in large text files.",
-      tech: ["C++", "DSA", "Hash Table"],
-      github: "https://github.com/yourusername/mini-search-engine",
-      live: "#",
-    },
+   
     {
       title: "Desh Darshan – Crazy Facts",
       description:
@@ -77,6 +70,15 @@ export default function Projects() {
   github: "https://github.com/yourusername/oops-calculator",
   live: "#",
 },
+ {
+  title: "Mini Search Engine – File Indexing & Retrieval System",
+  description:
+    "A lightweight yet powerful search engine built using efficient data structures like Hash Tables and Linked Lists for fast text indexing and retrieval. It scans multiple files, stores word-frequency mappings, and delivers quick, accurate search results using optimized lookup operations.",
+  tech: ["C++", "DSA", "Hash Tables", "Linked Lists"],
+  github: "https://github.com/yourusername/mini-search-engine",
+  live: "#",
+},
+
 
   ];
 
