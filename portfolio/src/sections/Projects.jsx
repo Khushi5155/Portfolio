@@ -3,14 +3,7 @@ import Tilt from "react-parallax-tilt";
 
 export default function Projects() {
   const projects = [
-    {
-      title: "OOPs Calculator",
-      description:
-        "A modular C++ console calculator using object-oriented principles like polymorphism, abstraction, and function overloading. Clean CLI-based UI + efficient class structure.",
-      tech: ["C++", "OOP", "CLI App"],
-      github: "https://github.com/yourusername/oops-calculator",
-      live: "#",
-    },
+   
     {
       title: "Mini Search Engine",
       description:
@@ -76,7 +69,15 @@ export default function Projects() {
   live: "https://your-kalaficial-live-link.com",         // replace with your live link
 },
 
-    
+    {
+  title: "OOPs Calculator – Object-Oriented C++ Console App",
+  description:
+    "A clean and modular calculator built using core Object-Oriented Programming principles such as abstraction, inheritance, and polymorphism. Designed with a structured class architecture, the app supports multiple operations, function overloading, and an intuitive CLI experience.",
+  tech: ["C++", "OOP", "Inheritance", "Polymorphism"],
+  github: "https://github.com/yourusername/oops-calculator",
+  live: "#",
+},
+
   ];
 
   return (
