@@ -81,8 +81,8 @@ export default function Projects() {
   description:
     "A clean and modular calculator built using core Object-Oriented Programming principles such as abstraction, inheritance, and polymorphism. Designed with a structured class architecture, the app supports multiple operations, function overloading, and an intuitive CLI experience.",
   tech: ["C++", "OOP", "Inheritance", "Polymorphism"],
-  github: "https://github.com/yourusername/oops-calculator",
-  live: "#",
+  github: "https://github.com/Khushi5155/Oops-Calculator",
+  live: "",
 },
  {
   title: "Mini Search Engine – File Indexing & Retrieval System",
