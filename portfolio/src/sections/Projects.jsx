@@ -29,7 +29,7 @@ export default function Projects() {
         "Socket.io",
         "WebSockets",
       ],
-      github: "https://github.com/yourusername/alerta-x",
+      github: "https://github.com/Khushi5155/AlertaX",
       live: "https://your-alertax-live-link.com",
     },
 
