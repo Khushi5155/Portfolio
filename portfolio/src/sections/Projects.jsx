@@ -61,8 +61,8 @@ export default function Projects() {
     "Express.js",
     "REST APIs",
   ],
-  github: "https://github.com/yourusername/kala-ficial", // replace with your GitHub repo
-  live: "https://your-kalaficial-live-link.com",         // replace with your live link
+  github: "https://github.com/Khushi5155/kala.ficial", // replace with your GitHub repo
+  live: "",         // replace with your live link
 },
   {
   title: "Desh Darshan – Explore India",
