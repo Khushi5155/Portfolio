@@ -90,8 +90,8 @@ export default function Projects() {
   description:
     "A lightweight yet powerful search engine built using efficient data structures like Hash Tables and Linked Lists for fast text indexing and retrieval. It scans multiple files, stores word-frequency mappings, and delivers quick, accurate search results using optimized lookup operations.",
   tech: ["C++", "DSA", "Hash Tables", "Linked Lists"],
-  github: "https://github.com/yourusername/mini-search-engine",
-  live: "#",
+  github: "https://github.com/Khushi5155/MiniSearchEngine",
+  live: "",
 },
 
 
