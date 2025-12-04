@@ -30,7 +30,7 @@ export default function Projects() {
         "WebSockets",
       ],
       github: "https://github.com/Khushi5155/AlertaX",
-      live: "https://your-alertax-live-link.com",
+      live: "",
     },
 
     // ⭐ NEW — MANNMITRA SIH PROJECT
@@ -46,8 +46,8 @@ export default function Projects() {
         "AI/ML",
         "NLP",
       ],
-      github: "https://github.com/yourusername/mannmitra", // add your repo
-      live: "https://your-mannmitra-live-link.com",        // add your live link
+      github: "https://github.com/Khushi5155/SIH-25", // add your repo
+      live: "",        
     },
     {
   title: "Kala.ficial – Global Art Showcase Platform",
