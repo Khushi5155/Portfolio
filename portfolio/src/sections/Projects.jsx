@@ -70,8 +70,8 @@ export default function Projects() {
   description:
     "An immersive web experience that lets users explore India’s states and UTs through stunning tourist destinations, famous cultural spots, and surprising crazy facts. Features dynamic category sliders, a spin-to-reveal engine, smooth animations, and a visually engaging UI. ",
   tech: ["HTML", "CSS", "JavaScript"],
-  github: "https://github.com/yourusername/desh-darshan",
-  live: "#",
+  github: "https://github.com/Khushi5155/DeshDarshan",
+  live: "",
 },
 
 
