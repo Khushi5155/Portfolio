@@ -73,6 +73,7 @@ export default function Achievements() {
             View Letter of Recommendation ⭐
           </motion.button>
         </div>
+       
 
         {/* MODAL */}
         <AnimatePresence>
@@ -109,6 +110,72 @@ export default function Achievements() {
             className="max-h-full max-w-full object-contain
                        rounded-lg shadow-lg"
           />
+        </div>
+      </motion.div>
+    </motion.div>
+  )}
+</AnimatePresence>
+
+ <motion.button
+  whileHover={{ scale: 1.05 }}
+  onClick={() => setOpenCertificates(true)}
+  className="px-6 py-3 border border-[#00FF9D] text-[#E6F1FF]
+             rounded-lg hover:bg-[#00FF9D] hover:text-black
+             transition-all duration-300 font-semibold"
+>
+  View All Certificates 🎓
+</motion.button>
+
+
+<AnimatePresence>
+  {openCertificates && (
+    <motion.div
+      className="fixed inset-0 bg-black/70 backdrop-blur-sm
+                 flex items-center justify-center z-50"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <motion.div
+        initial={{ scale: 0.85 }}
+        animate={{ scale: 1 }}
+        exit={{ scale: 0.85 }}
+        className="bg-[#0A192F] w-[95%] md:w-[80%] h-[85%]
+                   rounded-xl border border-[#00FF9D]/40
+                   shadow-2xl relative p-6 overflow-auto"
+      >
+        {/* Close Button */}
+        <button
+          onClick={() => setOpenCertificates(false)}
+          className="absolute top-4 right-4 text-[#00FF9D]
+                     hover:scale-110 transition"
+        >
+          <X size={28} />
+        </button>
+
+        {/* Title */}
+        <h3 className="text-2xl font-bold text-[#00FF9D] mb-6">
+          My Certificates
+        </h3>
+
+        {/* Certificates Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {certificates.map((cert, index) => (
+            <motion.a
+              key={index}
+              href={cert}
+              target="_blank"
+              whileHover={{ scale: 1.05 }}
+              className="bg-[#112240] border border-[#00FF9D]/30
+                         rounded-lg overflow-hidden shadow-lg"
+            >
+              <img
+                src={cert}
+                alt={`Certificate ${index + 1}`}
+                className="w-full h-48 object-contain bg-black"
+              />
+            </motion.a>
+          ))}
         </div>
       </motion.div>
     </motion.div>
