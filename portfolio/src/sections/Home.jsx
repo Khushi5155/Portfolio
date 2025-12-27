@@ -71,7 +71,7 @@ export default function Home() {
           {/* BUTTONS */}
           <div className="flex gap-4 mt-6 justify-center md:justify-start">
             <Button text="View Resume" link="/resume.pdf" />
-            <Button text="Contact Me" id="contact" />
+            <Button text="Contact Me" id="#contact" />
           </div>
 
           {/* SOCIAL ICONS */}
