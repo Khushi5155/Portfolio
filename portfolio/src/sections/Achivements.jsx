@@ -76,39 +76,45 @@ export default function Achievements() {
 
         {/* MODAL */}
         <AnimatePresence>
-          {openLOR && (
-            <motion.div
-              className="fixed inset-0 bg-black/70 backdrop-blur-sm
-                         flex items-center justify-center z-50"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-            >
-              <motion.div
-                initial={{ scale: 0.8 }}
-                animate={{ scale: 1 }}
-                exit={{ scale: 0.8 }}
-                className="bg-[#0A192F] w-[90%] md:w-[70%] h-[80%]
-                           rounded-xl border border-[#00FF9D]/40 shadow-xl relative"
-              >
-                {/* Close Button */}
-                <button
-                  onClick={() => setOpenLOR(false)}
-                  className="absolute top-4 right-4 text-[#00FF9D] hover:scale-110"
-                >
-                  <X size={28} />
-                </button>
+  {openLOR && (
+    <motion.div
+      className="fixed inset-0 bg-black/70 backdrop-blur-sm
+                 flex items-center justify-center z-50"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <motion.div
+        initial={{ scale: 0.85 }}
+        animate={{ scale: 1 }}
+        exit={{ scale: 0.85 }}
+        className="bg-[#0A192F] w-[95%] md:w-[70%] h-[85%]
+                   rounded-xl border border-[#00FF9D]/40
+                   shadow-2xl relative"
+      >
+        {/* Close Button */}
+        <button
+          onClick={() => setOpenLOR(false)}
+          className="absolute top-4 right-4 text-[#00FF9D]
+                     hover:scale-110 transition"
+        >
+          <X size={28} />
+        </button>
 
-                {/* PDF Viewer */}
-                <iframe
-                  src="/lor-gssoc.jpg"
-                  className="w-full h-full rounded-xl"
-                  title="Letter of Recommendation"
-                ></iframe>
-              </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        {/* Image Viewer */}
+        <div className="w-full h-full overflow-auto p-6 flex justify-center">
+          <img
+            src="/lor-gssoc.jpg"
+            alt="Letter of Recommendation - GSSoC"
+            className="max-h-full max-w-full object-contain
+                       rounded-lg shadow-lg"
+          />
+        </div>
+      </motion.div>
+    </motion.div>
+  )}
+</AnimatePresence>
+
 
       </div>
     </section>
