@@ -17,7 +17,7 @@ export default function Navbar() {
 
       {/* DESKTOP MENU */}
       <ul className="hidden md:flex gap-12 text-lg font-inter">
-        {["Home", "Skills", "Projects", "Achivements", "Contact"].map((item) => (
+        {["Home", "About", "Skills", "Projects", "Achivements", "Contact"].map((item) => (
           <li key={item}>
             <a
               href={`#${item.toLowerCase()}`}
