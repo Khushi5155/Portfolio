@@ -26,6 +26,16 @@ export default function Achievements() {
     "/certificates/image.png",
     "/certificates/image1.png",
     "/certificates/image2.png",
+    "/certificates/image3.png",
+    "/certificates/image4.png",
+    "/certificates/image5.png",
+    "/certificates/image6.png",
+    "/certificates/image7.png",
+    "/certificates/image8.png",
+    "/certificates/image9.png",
+    "/certificates/image10.png",
+    "/certificates/image11.png",
+    "/certificates/image12.png",
   ];
 
   return (
