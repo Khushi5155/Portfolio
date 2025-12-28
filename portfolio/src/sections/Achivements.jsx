@@ -23,9 +23,9 @@ export default function Achievements() {
   ];
 
   const certificates = [
-    "/certificates/cert1.jpg",
-    "/certificates/cert2.jpg",
-    "/certificates/cert3.jpg",
+    "/certificates/image.png",
+    "/certificates/image1.png",
+    "/certificates/image2.png",
   ];
 
   return (
