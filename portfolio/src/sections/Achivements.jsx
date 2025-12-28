@@ -5,6 +5,7 @@ import { X } from "lucide-react";
 
 export default function Achievements() {
   const [openLOR, setOpenLOR] = useState(false);
+  const [openCertificates, setOpenCertificates] = useState(false);
 
   const achievements = [
     {
@@ -21,13 +22,19 @@ export default function Achievements() {
     },
   ];
 
+  const certificates = [
+    "/certificates/cert1.jpg",
+    "/certificates/cert2.jpg",
+    "/certificates/cert3.jpg",
+  ];
+
   return (
     <section
       id="achievements"
       className="min-h-screen w-full flex items-center justify-center bg-[#0A192F] px-6 py-20"
     >
       <div className="max-w-5xl w-full">
-        
+
         {/* Heading */}
         <h2 className="text-4xl font-bold text-[#E6F1FF]">
           My <span className="text-[#00FF9D]">Achievements</span>
@@ -72,116 +79,94 @@ export default function Achievements() {
           >
             View Letter of Recommendation ⭐
           </motion.button>
-        </div>
-       
 
-        {/* MODAL */}
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            onClick={() => setOpenCertificates(true)}
+            className="px-6 py-3 border border-[#00FF9D] text-[#E6F1FF]
+                       rounded-lg hover:bg-[#00FF9D] hover:text-black
+                       transition-all duration-300 font-semibold"
+          >
+            View All Certificates 🎓
+          </motion.button>
+        </div>
+
+        {/* LOR MODAL */}
         <AnimatePresence>
-  {openLOR && (
-    <motion.div
-      className="fixed inset-0 bg-black/70 backdrop-blur-sm
-                 flex items-center justify-center z-50"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      <motion.div
-        initial={{ scale: 0.85 }}
-        animate={{ scale: 1 }}
-        exit={{ scale: 0.85 }}
-        className="bg-[#0A192F] w-[95%] md:w-[70%] h-[85%]
-                   rounded-xl border border-[#00FF9D]/40
-                   shadow-2xl relative"
-      >
-        {/* Close Button */}
-        <button
-          onClick={() => setOpenLOR(false)}
-          className="absolute top-4 right-4 text-[#00FF9D]
-                     hover:scale-110 transition"
-        >
-          <X size={28} />
-        </button>
-
-        {/* Image Viewer */}
-        <div className="w-full h-full overflow-auto p-6 flex justify-center">
-          <img
-            src="/lor-gssoc.jpg"
-            alt="Letter of Recommendation - GSSoC"
-            className="max-h-full max-w-full object-contain
-                       rounded-lg shadow-lg"
-          />
-        </div>
-      </motion.div>
-    </motion.div>
-  )}
-</AnimatePresence>
-
- <motion.button
-  whileHover={{ scale: 1.05 }}
-  onClick={() => setOpenCertificates(true)}
-  className="px-6 py-3 border border-[#00FF9D] text-[#E6F1FF]
-             rounded-lg hover:bg-[#00FF9D] hover:text-black
-             transition-all duration-300 font-semibold"
->
-  View All Certificates 🎓
-</motion.button>
-
-
-<AnimatePresence>
-  {openCertificates && (
-    <motion.div
-      className="fixed inset-0 bg-black/70 backdrop-blur-sm
-                 flex items-center justify-center z-50"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
-      <motion.div
-        initial={{ scale: 0.85 }}
-        animate={{ scale: 1 }}
-        exit={{ scale: 0.85 }}
-        className="bg-[#0A192F] w-[95%] md:w-[80%] h-[85%]
-                   rounded-xl border border-[#00FF9D]/40
-                   shadow-2xl relative p-6 overflow-auto"
-      >
-        {/* Close Button */}
-        <button
-          onClick={() => setOpenCertificates(false)}
-          className="absolute top-4 right-4 text-[#00FF9D]
-                     hover:scale-110 transition"
-        >
-          <X size={28} />
-        </button>
-
-        {/* Title */}
-        <h3 className="text-2xl font-bold text-[#00FF9D] mb-6">
-          My Certificates
-        </h3>
-
-        {/* Certificates Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {certificates.map((cert, index) => (
-            <motion.a
-              key={index}
-              href={cert}
-              target="_blank"
-              whileHover={{ scale: 1.05 }}
-              className="bg-[#112240] border border-[#00FF9D]/30
-                         rounded-lg overflow-hidden shadow-lg"
+          {openLOR && (
+            <motion.div
+              className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
             >
-              <img
-                src={cert}
-                alt={`Certificate ${index + 1}`}
-                className="w-full h-48 object-contain bg-black"
-              />
-            </motion.a>
-          ))}
-        </div>
-      </motion.div>
-    </motion.div>
-  )}
-</AnimatePresence>
+              <motion.div
+                initial={{ scale: 0.85 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 0.85 }}
+                className="bg-[#0A192F] w-[95%] md:w-[70%] h-[85%]
+                           rounded-xl border border-[#00FF9D]/40 relative"
+              >
+                <button
+                  onClick={() => setOpenLOR(false)}
+                  className="absolute top-4 right-4 text-[#00FF9D]"
+                >
+                  <X size={28} />
+                </button>
 
+                <div className="h-full p-6 flex justify-center items-center">
+                  <img
+                    src="/lor-gssoc.jpg"
+                    alt="Letter of Recommendation"
+                    className="max-h-full max-w-full object-contain rounded-lg"
+                  />
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        {/* CERTIFICATES MODAL */}
+        <AnimatePresence>
+          {openCertificates && (
+            <motion.div
+              className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <motion.div
+                initial={{ scale: 0.85 }}
+                animate={{ scale: 1 }}
+                exit={{ scale: 0.85 }}
+                className="bg-[#0A192F] w-[95%] md:w-[80%] h-[85%]
+                           rounded-xl border border-[#00FF9D]/40 p-6 overflow-auto relative"
+              >
+                <button
+                  onClick={() => setOpenCertificates(false)}
+                  className="absolute top-4 right-4 text-[#00FF9D]"
+                >
+                  <X size={28} />
+                </button>
+
+                <h3 className="text-2xl font-bold text-[#00FF9D] mb-6">
+                  My Certificates
+                </h3>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                  {certificates.map((cert, index) => (
+                    <motion.img
+                      key={index}
+                      src={cert}
+                      whileHover={{ scale: 1.05 }}
+                      className="w-full h-48 object-contain bg-black rounded-lg border border-[#00FF9D]/30"
+                    />
+                  ))}
+                </div>
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
       </div>
     </section>
