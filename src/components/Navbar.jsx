@@ -3,12 +3,12 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
-  "Home",
-  "About",
-  "Skills",
-  "Projects",
-  "Achievements",
-  "Contact",
+  { name: "Home", id: "home" },
+  { name: "About", id: "about" },
+  { name: "Skills", id: "skills" },
+  { name: "Projects", id: "projects" },
+  { name: "Achievements", id: "achievements" },
+  { name: "Contact", id: "contact" },
 ];
 
 export default function Navbar() {
@@ -33,16 +33,14 @@ export default function Navbar() {
         {/* DESKTOP MENU */}
         <ul className="hidden md:flex gap-10 text-lg font-medium">
           {navItems.map((item) => (
-            <li key={item} className="relative group">
+            <li key={item.id} className="relative group">
               <a
-                href={`#${item.toLowerCase()}`}
+                href={`#${item.id}`}
                 className="text-[#E6F1FF] hover:text-[#00FF9D] transition"
               >
-                {item}
-                <span
-                  className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#00FF9D]
-                  group-hover:w-full transition-all duration-300"
-                />
+                {item.name}
+                <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#00FF9D]
+                  group-hover:w-full transition-all duration-300" />
               </a>
             </li>
           ))}
@@ -67,7 +65,7 @@ export default function Navbar() {
             transition={{ duration: 0.4 }}
             className="fixed inset-0 bg-[#0A192F]/95 backdrop-blur-xl z-[60]"
           >
-            {/* CLOSE */}
+            {/* CLOSE BUTTON */}
             <button
               onClick={() => setMobileOpen(false)}
               className="absolute top-6 right-6 text-[#00FF9D]"
@@ -78,14 +76,14 @@ export default function Navbar() {
             {/* MENU ITEMS */}
             <ul className="h-full flex flex-col items-center justify-center gap-10 text-2xl">
               {navItems.map((item) => (
-                <li key={item}>
+                <li key={item.id}>
                   <a
+                    href={`#${item.id}`}
                     onClick={() => setMobileOpen(false)}
-                    href={`#${item.toLowerCase()}`}
                     className="text-[#E6F1FF] hover:text-[#00FF9D]
                     transition hover:scale-110"
                   >
-                    {item}
+                    {item.name}
                   </a>
                 </li>
               ))}
