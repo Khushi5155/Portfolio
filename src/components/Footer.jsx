@@ -3,17 +3,22 @@ import { Github, Linkedin, Mail, Heart } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0A192F] text-[#E6F1FF] py-10  border-t border-[#00FF9D]/30">
-      
+    <footer className="bg-[#0A192F] text-[#E6F1FF] py-10 border-t border-[#00FF9D]/30">
+
       {/* MAIN CONTAINER */}
-      <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+      <div className="
+        max-w-6xl mx-auto px-6
+        flex flex-col gap-6
+        md:flex-row md:justify-between md:items-center
+        items-center text-center md:text-left
+      ">
 
         {/* BRANDING */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-2xl font-bold tracking-wide"
+          className="text-xl md:text-2xl font-bold tracking-wide"
           style={{ fontFamily: "'Poppins', sans-serif" }}
         >
           <span className="text-[#00FF9D]">&lt;/&gt;</span> Khushi.dev
@@ -24,12 +29,19 @@ export default function Footer() {
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6 }}
-          className="flex gap-6"
+          className="
+            flex gap-6
+            mt-2 md:mt-0
+          "
         >
           <a
             href="https://github.com/Khushi5155"
             target="_blank"
-            className="icon-btn hover:text-[#00FF9D] transition-all duration-300"
+            className="
+              p-3 rounded-full border border-[#00FF9D]/30
+              hover:bg-[#00FF9D] hover:text-black
+              transition-all duration-300
+            "
           >
             <Github size={22} />
           </a>
@@ -37,14 +49,22 @@ export default function Footer() {
           <a
             href="https://www.linkedin.com/in/khushi-kumari-bb4305327"
             target="_blank"
-            className="icon-btn hover:text-[#00FF9D] transition-all duration-300"
+            className="
+              p-3 rounded-full border border-[#00FF9D]/30
+              hover:bg-[#00FF9D] hover:text-black
+              transition-all duration-300
+            "
           >
             <Linkedin size={22} />
           </a>
 
           <a
             href="mailto:kkaayana5155@gmail.com"
-            className="icon-btn hover:text-[#00FF9D] transition-all duration-300"
+            className="
+              p-3 rounded-full border border-[#00FF9D]/30
+              hover:bg-[#00FF9D] hover:text-black
+              transition-all duration-300
+            "
           >
             <Mail size={22} />
           </a>
@@ -56,10 +76,14 @@ export default function Footer() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="mt-8 text-center text-sm text-[#8892B0]"
+        className="
+          mt-8 px-6
+          text-center text-xs md:text-sm
+          text-[#8892B0]
+        "
         style={{ fontFamily: "'Inter', sans-serif" }}
       >
-        © {new Date().getFullYear()}  
+        © {new Date().getFullYear()}
         <span className="text-[#00FF9D] font-semibold"> Khushi Kumari</span>.  
         Built with <Heart size={14} className="inline text-[#00FF9D]" /> dedication & passion.
       </motion.div>
