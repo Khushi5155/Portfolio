@@ -62,57 +62,63 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* ================= MOBILE MENU ================= */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[55]"
-          >
-            {/* BACKDROP */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setMobileOpen(false)}
-              className="absolute inset-0 bg-black/60"
-            />
+     {/* ================= MOBILE MENU ================= */}
+<AnimatePresence>
+  {mobileOpen && (
+    <>
+      {/* BACKDROP */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        onClick={() => setMobileOpen(false)}
+        className="fixed inset-0 bg-black/50 z-[55]"
+      />
 
-            {/* SLIDE PANEL */}
-            <motion.div
-              initial={{ y: "-100%" }}
-              animate={{ y: 0 }}
-              exit={{ y: "-100%" }}
-              transition={{ duration: 0.45, ease: "easeInOut" }}
-              className="absolute top-0 left-0 w-full h-full
-              bg-[#0A192F]/95 backdrop-blur-xl
-              flex items-center justify-center"
+      {/* SIDE DRAWER */}
+      <motion.aside
+        initial={{ x: "100%" }}
+        animate={{ x: 0 }}
+        exit={{ x: "100%" }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
+        className="fixed top-0 right-0 h-full w-[75%] sm:w-[60%]
+        bg-[#0A192F] backdrop-blur-xl
+        border-l border-[#00FF9D]/20
+        z-[60] px-6 py-8"
+      >
+        {/* CLOSE BUTTON */}
+        <button
+          onClick={() => setMobileOpen(false)}
+          className="absolute top-6 right-6 text-[#00FF9D]"
+        >
+          <X size={30} />
+        </button>
+
+        {/* MENU */}
+        <ul className="mt-20 flex flex-col gap-8 text-xl font-medium">
+          {navItems.map((item, i) => (
+            <motion.li
+              key={item.id}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: i * 0.07 }}
             >
-              <ul className="flex flex-col gap-10 text-2xl font-semibold">
-                {navItems.map((item, i) => (
-                  <motion.li
-                    key={item.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: i * 0.08 }}
-                  >
-                    <a
-                      href={`#${item.id}`}
-                      onClick={() => setMobileOpen(false)}
-                      className="text-[#E6F1FF] hover:text-[#00FF9D]
-                      transition hover:scale-110"
-                    >
-                      {item.name}
-                    </a>
-                  </motion.li>
-                ))}
-              </ul>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+              <a
+                href={`#${item.id}`}
+                onClick={() => setMobileOpen(false)}
+                className="text-[#E6F1FF] hover:text-[#00FF9D]
+                transition"
+              >
+                {item.name}
+              </a>
+            </motion.li>
+          ))}
+        </ul>
+      </motion.aside>
+    </>
+  )}
+</AnimatePresence>
+
     </>
   );
 }
