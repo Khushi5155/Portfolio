@@ -33,7 +33,12 @@ export default function Home() {
       <div className="pt-20 md:pt-28 flex flex-col items-center text-center md:text-left md:flex-row gap-10">
 
         {/* PROFILE IMAGE (Same style as screenshot) */}
-        <div className="relative w-64 md:w-80 mx-auto transform -translate-x-50 -translate-y-15">
+        <div className="
+  relative 
+  w-56 sm:w-64 md:w-80 
+  mx-auto 
+  md:transform md:-translate-x-12 md:-translate-y-10
+">
 
           <img
             src={profileImg}
@@ -75,7 +80,13 @@ export default function Home() {
           </div>
 
           {/* SOCIAL ICONS */}
-          <div className="flex gap-5 mt-6 justify-center md:justify-start text-2xl">
+          <div className="
+  flex gap-5 
+  mt-10 sm:mt-8 md:mt-6 
+  justify-center md:justify-start 
+  text-2xl
+">
+
             <a
               href="https://github.com/Khushi5155"
               className="hover:text-[#00FF9D] transition-all duration-300"
