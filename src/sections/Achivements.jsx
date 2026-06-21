@@ -87,7 +87,7 @@ export default function Achievements() {
                        rounded-lg hover:bg-[#00FF9D] hover:text-black
                        transition-all duration-300 font-semibold"
           >
-            View Letter of Recommendation ⭐
+            View Letter of Recommendation 
           </motion.button>
 
           <motion.button
@@ -97,7 +97,7 @@ export default function Achievements() {
                        rounded-lg hover:bg-[#00FF9D] hover:text-black
                        transition-all duration-300 font-semibold"
           >
-            View All Certificates 🎓
+            View All Certificates 
           </motion.button>
         </div>
 

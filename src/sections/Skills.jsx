@@ -6,15 +6,21 @@ import {
   FaReact,
   FaTools,
   FaFigma,
+  FaNodeJs,
+  FaGithub,
 } from "react-icons/fa";
 import {
   SiCplusplus,
   SiTailwindcss,
   SiPython,
   SiFigma,
+  SiMongodb,
+  SiFastapi,
+  SiExpress,
+  SiVercel,
 } from "react-icons/si";
 import { motion } from "framer-motion";
-
+ 
 export default function Skills() {
   const skillCategories = [
     {
@@ -29,6 +35,17 @@ export default function Skills() {
       ],
     },
     {
+      title: "Backend & Databases",
+      skills: ["Node.js", "Express.js", "FastAPI", "MongoDB", "REST APIs"],
+      icons: [
+        <FaNodeJs className="text-green-500 text-3xl" />,
+        <SiExpress className="text-gray-300 text-3xl" />,
+        <SiFastapi className="text-teal-400 text-3xl" />,
+        <SiMongodb className="text-green-400 text-3xl" />,
+        <FaTools className="text-gray-300 text-3xl" />,
+      ],
+    },
+    {
       title: "Programming & OOPs",
       skills: ["C++", "C", "Python", "OOPs Concepts"],
       icons: [
@@ -39,25 +56,33 @@ export default function Skills() {
       ],
     },
     {
+      title: "Deployment & Tools",
+      skills: ["Vercel", "Render", "Git & GitHub", "VS Code"],
+      icons: [
+        <SiVercel className="text-gray-200 text-3xl" />,
+        <FaTools className="text-gray-300 text-3xl" />,
+        <FaGithub className="text-gray-200 text-3xl" />,
+        <FaTools className="text-gray-300 text-3xl" />,
+      ],
+    },
+    {
       title: "Design & Tools",
-      skills: ["Figma", "UI / UX Design", "VS Code", "Git & GitHub"],
+      skills: ["Figma", "UI / UX Design", "Git & GitHub"],
       icons: [
         <SiFigma className="text-pink-500 text-3xl" />,
         <FaFigma className="text-purple-400 text-3xl" />,
         <FaTools className="text-gray-300 text-3xl" />,
-        <FaTools className="text-gray-300 text-3xl" />,
       ],
     },
   ];
-
-  // Java REMOVED below ✔
-  const learningNow = ["DSA in C++", "API Integration", "Responsive UI"];
-  const learningIcons = [
-    <SiCplusplus className="text-blue-500 text-3xl" />,
-    <FaTools className="text-gray-300 text-3xl" />,
-    <FaReact className="text-cyan-400 text-3xl" />,
+ 
+  const learningNow = [
+    { label: "DSA in C++", icon: <SiCplusplus className="text-blue-500 text-3xl" /> },
+    { label: "FastAPI", icon: <SiFastapi className="text-teal-400 text-3xl" /> },
+    { label: "AI/ML Integration", icon: <FaTools className="text-gray-300 text-3xl" /> },
+    { label: "System Design", icon: <FaReact className="text-cyan-400 text-3xl" /> },
   ];
-
+ 
   return (
     <section
       id="skills"
@@ -69,7 +94,7 @@ export default function Skills() {
           My <span className="text-[#00FF9D]">Skills</span>
         </h2>
         <div className="w-24 h-1 bg-[#00FF9D] mx-auto md:mx-0 mt-2 mb-10 rounded-full"></div>
-
+ 
         {/* Skill Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => (
@@ -94,25 +119,25 @@ export default function Skills() {
             </motion.div>
           ))}
         </div>
-
+ 
         {/* Currently Learning Section */}
         <div className="mt-12">
           <h3 className="text-2xl font-semibold text-[#E6F1FF]">
             Currently <span className="text-[#00FF9D]">Learning 🚀</span>
           </h3>
           <div className="w-32 h-1 bg-[#00FF9D] mt-2 mb-6 rounded-full"></div>
-
+ 
           <motion.div
             whileHover={{ scale: 1.03 }}
             className="bg-gradient-to-r from-[#112240] to-[#0A192F] p-6 rounded-xl shadow-lg border border-[#00FF9D]/30"
           >
             <div className="flex flex-wrap gap-3">
-              {learningNow.map((item, idx) => (
+              {learningNow.map((item) => (
                 <span
-                  key={idx}
+                  key={item.label}
                   className="px-3 py-2 border border-[#00FF9D]/40 rounded-lg flex items-center gap-2 text-[#E6F1FF] text-sm hover:bg-[#00FF9D] hover:text-black transition-all duration-300"
                 >
-                  {learningIcons[idx]} <span>{item}</span>
+                  {item.icon} <span>{item.label}</span>
                 </span>
               ))}
             </div>
@@ -122,3 +147,4 @@ export default function Skills() {
     </section>
   );
 }
+ 

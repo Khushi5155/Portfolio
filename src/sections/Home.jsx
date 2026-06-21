@@ -4,7 +4,7 @@ import profileImg from "../assets/profile.jpg";
 import Button from "../components/Button";
 import Particles from "react-tsparticles";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
-
+ 
 export default function Home() {
   return (
     <section
@@ -13,7 +13,7 @@ export default function Home() {
     >
       {/* GRADIENT OVERLAY */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#00101E] opacity-70 z-0" />
-
+ 
       {/* PARTICLES */}
       <Particles
         className="absolute inset-0 -z-10"
@@ -28,10 +28,10 @@ export default function Home() {
           fullScreen: false,
         }}
       />
-
+ 
       {/* MAIN CONTENT */}
       <div className="pt-20 md:pt-28 flex flex-col items-center text-center md:text-left md:flex-row gap-10">
-
+ 
         {/* PROFILE IMAGE (Same style as screenshot) */}
         <div className="
   relative 
@@ -39,46 +39,45 @@ export default function Home() {
   mx-auto 
   md:transform md:-translate-x-12 md:-translate-y-10
 ">
-
+ 
           <img
             src={profileImg}
             alt="Profile"
             className="w-full object-contain select-none"
           />
-
+ 
           {/* Bottom Fade to blend with background */}
           <div className="absolute bottom-0 left-0 w-full h-28 bg-gradient-to-t from-[#0A192F] to-transparent" />
         </div>
-
+ 
         {/* TEXT SECTION */}
         <div className="max-w-lg animate-slideUp">
           <h1 className="text-4xl md:text-5xl font-poppins font-bold text-[#E6F1FF]">
-            Hi, I'm <span className="text-[#00FF9D]">Khushi</span> 👋
+            Hi, I'm <span className="text-[#00FF9D]">Khushi</span> 
           </h1>
-
+ 
           {/* TYPEWRITER */}
           <p className="mt-2 text-[#00FF9D] font-semibold text-xl typing-text">
-            I build clean & modern web experiences.
+            I build full-stack web apps, end to end.
           </p>
-
+ 
           {/* DESCRIPTION */}
           <p className="mt-4 text-[#8892B0] font-inter text-lg leading-relaxed">
-            A passionate
-            <span className="text-[#00FF9D] font-semibold"> Web Developer</span>
-            who loves turning ideas into interactive, user-friendly interfaces.
-            Always curious, always learning — currently exploring
+            A
+            <span className="text-[#00FF9D] font-semibold"> full-stack web developer</span>{" "}
+            who builds complete products — frontend, backend, database, and
+            deployment. Currently working across{" "}
             <span className="text-[#00FF9D] font-semibold">
-              {" "}
-              React, Tailwind & AI-powered Web Apps.
+              React, Node.js, FastAPI & AI-integrated apps.
             </span>
           </p>
-
+ 
           {/* BUTTONS */}
           <div className="flex gap-4 mt-6 justify-center md:justify-start">
-            <Button text="View Resume" link="/resume.pdf" />
+            <Button text="View Resume" link="/resume.pdf" download />
             <Button text="Contact Me" id="#contact" />
           </div>
-
+ 
           {/* SOCIAL ICONS */}
           <div className="
   flex gap-5 
@@ -86,21 +85,25 @@ export default function Home() {
   justify-center md:justify-start 
   text-2xl
 ">
-
+ 
             <a
               href="https://github.com/Khushi5155"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-[#00FF9D] transition-all duration-300"
             >
               <FaGithub />
             </a>
-
+ 
             <a
               href="https://www.linkedin.com/in/khushi-kumari-bb4305327"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-[#00FF9D] transition-all duration-300"
             >
               <FaLinkedin />
             </a>
-
+ 
             <a
               href="mailto:kkaayana5155@gmail.com"
               className="hover:text-[#00FF9D] transition-all duration-300"
@@ -110,7 +113,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-
+ 
       {/* SCROLL DOWN ARROW */}
       <a
         href="#about"
@@ -121,3 +124,4 @@ export default function Home() {
     </section>
   );
 }
+ 
