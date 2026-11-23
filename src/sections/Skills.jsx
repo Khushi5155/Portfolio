@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import {
+  Terminal,
   Layout,
   Server,
   Database,
   Wrench,
   BrainCircuit,
-  Terminal,
 } from "lucide-react";
 
 export default function Skills() {
@@ -29,19 +29,19 @@ export default function Skills() {
       skills: ["FastAPI", "Node.js", "Express.js", "RESTful APIs", "API Integration"],
     },
     {
-      category: "Databases & Data Modeling",
+      category: "Databases & Graph Technologies",
       icon: Database,
       description: "Relational, graph, and schema architecture",
       skills: ["PostgreSQL", "Neo4j (Graph DB)", "Database Design", "SQL Queries"],
     },
     {
-      category: "Tools & Deployment",
+      category: "Developer Tools & Deployment",
       icon: Wrench,
       description: "Developer tooling, containerization, and hosting workflows",
       skills: ["Git", "GitHub", "Docker", "Postman", "Vercel", "Render", "Linux/CLI"],
     },
     {
-      category: "Core Computer Science",
+      category: "Computer Science Fundamentals",
       icon: BrainCircuit,
       description: "Fundamental CS principles and analytical problem solving",
       skills: ["Data Structures & Algorithms", "Object-Oriented Programming (OOP)", "DBMS", "Systems Debugging", "Problem Solving"],
@@ -52,15 +52,15 @@ export default function Skills() {
     <section id="skills" className="py-24 px-6 md:px-12 w-full max-w-6xl mx-auto">
       {/* SECTION HEADER */}
       <div className="flex flex-col items-center md:items-start text-center md:text-left mb-14">
-        <span className="text-xs uppercase tracking-widest font-semibold text-emerald-600 dark:text-emerald-400 mb-2">
+        <span className="text-xs uppercase tracking-widest font-semibold text-indigo-600 dark:text-[#38BDF8] mb-2">
           Capabilities
         </span>
-        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white font-heading">
+        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-[#F8FAFC] font-heading">
           Technical Skills
         </h2>
-        <div className="w-12 h-1 bg-emerald-500 rounded-full mt-3"></div>
-        <p className="text-slate-600 dark:text-slate-400 text-sm max-w-xl mt-3">
-          Technologies, frameworks, and foundational computer science competencies I use to build real-world software.
+        <div className="w-12 h-1 bg-gradient-to-r from-indigo-500 to-sky-400 rounded-full mt-3"></div>
+        <p className="text-slate-600 dark:text-[#94A3B8] text-sm max-w-xl mt-3">
+          Technologies, frameworks, and foundational computer science competencies I use to architect and ship real-world software.
         </p>
       </div>
 
@@ -75,28 +75,28 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: index * 0.06 }}
-              className="p-6 rounded-2xl bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800/80 hover:border-slate-300 dark:hover:border-slate-700/90 shadow-xs dark:shadow-none transition-all duration-200 flex flex-col justify-between"
+              className="p-6 rounded-2xl bg-white dark:bg-[#0D1127] border border-slate-200/90 dark:border-[#6366F1]/20 hover:border-indigo-400/50 dark:hover:border-[#6366F1]/45 hover:shadow-md dark:hover:shadow-[0_8px_30px_rgba(13,17,39,0.7)] transition-all duration-200 flex flex-col justify-between group"
             >
               <div>
                 <div className="flex items-center gap-3 mb-3">
-                  <div className="p-2 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20">
+                  <div className="p-2.5 rounded-xl bg-indigo-50 dark:bg-[#131B38] text-indigo-600 dark:text-[#38BDF8] border border-indigo-200/70 dark:border-[#38BDF8]/20 group-hover:scale-105 transition-transform duration-200">
                     <Icon size={18} />
                   </div>
-                  <h3 className="font-heading font-semibold text-slate-900 dark:text-white text-base">
+                  <h3 className="font-heading font-bold text-slate-900 dark:text-[#F8FAFC] text-base group-hover:text-indigo-600 dark:group-hover:text-[#38BDF8] transition-colors">
                     {group.category}
                   </h3>
                 </div>
-                <p className="text-xs text-slate-500 dark:text-slate-400 mb-5 leading-relaxed">
+                <p className="text-xs text-slate-500 dark:text-[#94A3B8] mb-5 leading-relaxed">
                   {group.description}
                 </p>
               </div>
 
               {/* Skill Pills */}
-              <div className="flex flex-wrap gap-2 pt-3 border-t border-slate-100 dark:border-slate-800/60">
+              <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-100 dark:border-[#6366F1]/15">
                 {group.skills.map((skill, sIdx) => (
                   <span
                     key={sIdx}
-                    className="px-2.5 py-1 rounded-md text-xs font-medium bg-slate-100 text-slate-700 border border-slate-200 hover:border-emerald-500/50 hover:text-emerald-700 dark:bg-slate-800/70 dark:text-slate-200 dark:border-slate-700/60 dark:hover:border-emerald-500/40 dark:hover:text-emerald-300 transition-colors"
+                    className="px-2.5 py-1 rounded-lg text-xs font-medium font-mono bg-[#F4F2EC] text-slate-700 border border-slate-200/80 hover:border-indigo-400/50 hover:text-indigo-700 hover:bg-indigo-50/50 dark:bg-[#1B244A] dark:text-[#F8FAFC] dark:border-[#6366F1]/25 dark:hover:border-[#38BDF8]/50 dark:hover:text-[#38BDF8] dark:hover:bg-[#131B38] transition-all duration-150"
                   >
                     {skill}
                   </span>

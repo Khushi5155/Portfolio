@@ -22,13 +22,13 @@ export default function Button({
 
   const variantClasses = {
     primary:
-      "bg-emerald-500 text-slate-950 hover:bg-emerald-400 border border-emerald-400/40 shadow-sm shadow-emerald-500/20 active:scale-[0.98]",
+      "bg-gradient-to-r from-indigo-500 via-indigo-600 to-indigo-700 hover:from-indigo-400 hover:to-indigo-600 text-white border border-indigo-400/30 shadow-md shadow-indigo-500/20 dark:shadow-indigo-500/25 active:scale-[0.98]",
     secondary:
-      "bg-white text-slate-800 border-slate-300 hover:bg-slate-100 hover:text-slate-950 hover:border-emerald-500/60 shadow-sm dark:bg-slate-900/80 dark:text-slate-200 dark:border-slate-700/70 dark:hover:border-emerald-500/50 dark:hover:text-white dark:hover:bg-slate-800/80 active:scale-[0.98]",
+      "bg-white text-slate-800 border border-slate-200/90 hover:bg-slate-50 hover:border-indigo-400/50 hover:text-slate-950 shadow-xs dark:bg-[#0D1127] dark:text-[#F8FAFC] dark:border-[#6366F1]/20 dark:hover:border-[#6366F1]/50 dark:hover:bg-[#131B38] active:scale-[0.98]",
     ghost:
-      "text-slate-600 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-300 dark:hover:text-emerald-400 dark:hover:bg-slate-800/50 active:scale-[0.98]",
+      "text-slate-600 hover:text-slate-900 hover:bg-slate-100 dark:text-[#94A3B8] dark:hover:text-[#F8FAFC] dark:hover:bg-[#131B38]/70 active:scale-[0.98]",
     outline:
-      "border border-emerald-600/60 text-emerald-700 hover:bg-emerald-50 dark:border-emerald-500/50 dark:text-emerald-400 dark:hover:bg-emerald-500/10 active:scale-[0.98]",
+      "border border-indigo-600/40 text-indigo-700 hover:bg-indigo-50 dark:border-[#38BDF8]/40 dark:text-[#38BDF8] dark:hover:bg-[#38BDF8]/10 active:scale-[0.98]",
   }[variant] || "";
 
   const baseClasses =
